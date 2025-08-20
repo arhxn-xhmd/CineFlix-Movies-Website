@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineflix – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="left">
+            <div class="hamburger">
+                <img src="img/hamburger.svg" alt="Hamburger">
+            </div>
+            <img width="200" src="img/logo.jpeg" alt="Logo of Cineflix">
+            <ul>
+                <li>Home</li>
+                <li>Category</li>
+                <li>LIVE 🔴</li>
+            </ul>
+        </div>
+
+        <div class="right flexbox">
+
+            <div class="search-container">
+                <input type="text" id="search" placeholder="I'm looking for...">
+                <img width="23" src="img/search.svg" alt="Search Button">
+            </div>
+
+            <div class="sign-in flexbox">
+                Sign In
+                <img src="img/signin.svg" class="color-svg" alt="Sign In Button Logo">
+            </div>
+        </div>
+    </header>
+
+    <aside>
+        <div class="logos">
+            <div><img width="200" src="img/logo.jpeg" alt="Cineflix"></div>
+            <div><img class="cross" src="img/cross.svg" alt="Cross"></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Category</li>
+                <li>LIVE 🔴</li>
+            </ul>
+        </nav>
+
+        <div class="other-info">
+            <div class="search-logo-and-info">
+                <img width="23" src="img/search.svg" alt="Search Button">
+                Search
+            </div>
+
+            <div class="sign-in-logo-and-info">
+                <img width="23" src="img/signin.svg" alt="Sign In Button">
+                Sign In
+            </div>
+        </div>
+
+    </aside>
+
+    <figure class="align-to-center"></figure>
+
+    <section class="section-alignments">
+
+        <div class="left-bar flexbox">
+            <select name="genres" id="genres">
+                <option value="all">All genres</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="animal">Animal</option>
+                <option value="animation">Animation</option>
+                <option value="biography">Biography</option>
+            </select>
+
+            <select name="years" id="years">
+                <option value="all">All the years</option>
+                <option value="2022-2025">2022-2025</option>
+                <option value="2020-2021">2020-2021</option>
+                <option value="2010-2019">2010-2019</option>
+                <option value="2000-2009">2000-2009</option>
+                <option value="1980-1999">1980-1999</option>
+            </select>
+        </div>
+
+        <div class="right-bar flexbox">
+            <div class="selected">Featured</div>
+            <div>Popular</div>
+            <div>Newest</div>
+        </div>
+    </section>
+
+    <main>
+        <div class="movies align-to-center flexbox"></div>
+        <div class="flexbox align-to-center"><button class="show-more">SHOW MORE</button></div>
+        <h1 class="align-h1s margins">Category</h1>
+        <div class="categories align-to-center"></div>
+        <h1 class="align-h1s margins">Live TV Shows</h1>
+        <div class="align-to-center live-shows"></div>
+    </main>
+
+    <address class="margins align-footer">
+
+        <div class="left-side">
+            <img width="200" src="img/logo.jpeg" alt="CineFlix logo">
+            <p>Movies & TV Shows, Online cinema,<br>Movie database HTML Template</p>
+            <div class="social-media-logos flexbox">
+                <img width="20" src="img/facebook.svg" alt="facebook">
+                <img src="img/twitter.svg" alt="twitter">
+                <img src="img/instagram.svg" alt="instagram">
+                <img width="20" src="img/tiktok.svg" alt="tiktok">
+                <img width="30" src="img/youtube.svg" alt="youtube">
+            </div>
+        </div>
+
+        <div class="right-side">
+            <ul>
+                <li><b>CineFlix</b></li>
+                <li>About us</li>
+                <li>My profile</li>
+                <li>Pricing plans</li>
+                <li>Contacts</li>
+            </ul>
+            <ul>
+                <li><b>Browse</b></li>
+                <li>Live TV</li>
+                <li>Live News</li>
+                <li>Live Sports</li>
+                <li>Streaming Library</li>
+            </ul>
+            <ul>
+                <li style="color: #0F111A;">Arhaan</li>
+                <li>TV Shows</li>
+                <li>Movies</li>
+                <li>Kids</li>
+                <li>Collections</li>
+            </ul>
+            <ul>
+                <li><b>Help</b></li>
+                <li>Account & Billing</li>
+                <li>Plans & Pricing</li>
+                <li>Supported Devices</li>
+                <li>Accessibility</li>
+            </ul>
+        </div>
+    </address>
+
+    <footer class="align-to-center margins">
+        <article class="transition">&copy copyright 2025 CineFlix</article>
+        <div class="lower flexbox">
+            <div class="transition">Privacy Policy</div>
+            <div class="transition">Terms and Conditions</div>
+        </div>
+    </footer>
+
+    <div class="arrow transition">
+        <img height="20" src="img/arrow.svg" alt="Up arrow">
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

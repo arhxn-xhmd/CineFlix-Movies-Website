@@ -1,0 +1,64 @@
+.color-svg {
+  stroke: #3B82F6;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.border {
+  border: 2px solid white;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-to-center, .align-h1s, .section-alignments, .align-footer {
+  width: 80vw;
+  margin: 23px auto;
+}
+
+.margins {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #1d4ed8;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent;
+}
+
