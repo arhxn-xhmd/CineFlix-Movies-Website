@@ -17,7 +17,7 @@ It displays movies, posters, categories, and live shows in a clean, streaming-li
 │── js/              # JavaScript files
 │── python/          # Python scripts used to generate JSON files
 │── favicon.ico      # Website favicon
-│── index.html       # Main entry point```
+│── index.html       # Main entry point
 
 
 ## 🚀 Features
