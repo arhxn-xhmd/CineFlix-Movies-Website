@@ -7,7 +7,7 @@ It displays movies, posters, categories, and live shows in a clean, streaming-li
 
 ## 📂 Folder Structure
 
-```CineFlix-Movies-Website/
+CineFlix-Movies-Website/
 │── Categories/      # JSON files for movie categories
 │── Live Shows/      # JSON files for live shows / series
 │── Movies/          # JSON files for movies
