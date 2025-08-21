@@ -1,7 +1,7 @@
 # 🎬 CineFlix - Movies Website
 
-CineFlix is a **movie showcase website** built with **HTML, CSS, JavaScript**, and a bit of **Python**.  
-It displays movies, posters, categories, and live shows in a clean, streaming-like interface.
+CineFlix is a **movie showcase website** built with **HTML 🌐, CSS 🎨, JavaScript ⚡**, and a bit of **Python 🐍**.  
+It displays movies 🎥, posters 🖼️, categories 🎭, and live shows 📺  in a clean, streaming-like interface.
 
 ---
 
@@ -9,16 +9,18 @@ It displays movies, posters, categories, and live shows in a clean, streaming-li
 
 ```
 CineFlix-Movies-Website/
-│── Categories/      # JSON files for movie categories
-│── Live Shows/      # JSON files for live shows / series
-│── Movies/          # JSON files for movies
-│── Posters/         # Posters & banners
-│── css/             # Stylesheets
-│── img/             # Images & icons
-│── js/              # JavaScript files
-│── python/          # Python scripts used to generate JSON files
-│── favicon.ico      # Website favicon
-│── index.html       # Main entry point
+│── 📁 Categories/          # JSON files for movie categories
+│── 📁 Live Shows/          # JSON files for live shows / series
+│── 📁 Movies/              
+│   ├── 🎬 Preloaded Movies/ # Movies available by default (JSON files) 
+│   └── 🎬 Postloaded Movies # Movies added later (JSON Files) 
+│── 🖼️ Posters/             # Posters & banners
+│── 🎨 css/                 # Stylesheets
+│── 🖼️ img/                 # Images & icons
+│── ⚡ js/                  # JavaScript files
+│── 🐍 python/              # Python scripts used to generate JSON files
+│── 🔖 favicon.ico          # Website favicon
+│── 🌐 index.html           # Main entry point
 ```
 
 ## 🚀 Features
