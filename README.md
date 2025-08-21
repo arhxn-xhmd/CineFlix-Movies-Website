@@ -7,6 +7,7 @@ It displays movies, posters, categories, and live shows in a clean, streaming-li
 
 ## 📂 Folder Structure
 
+```
 CineFlix-Movies-Website/
 │── Categories/      # JSON files for movie categories
 │── Live Shows/      # JSON files for live shows / series
@@ -18,7 +19,7 @@ CineFlix-Movies-Website/
 │── python/          # Python scripts used to generate JSON files
 │── favicon.ico      # Website favicon
 │── index.html       # Main entry point
-
+```
 
 ## 🚀 Features
 
@@ -46,7 +47,8 @@ CineFlix-Movies-Website/
    git clone https://github.com/arhxn-xhmd/CineFlix-Movies-Website.git
 
 2. Open the project folder:
-   ```cd CineFlix-Movies-Website
+   ```bash 
+   cd CineFlix-Movies-Website
 
 3. Open index.html in your browser to view the website.
 
