@@ -34,11 +34,9 @@ document.querySelector(".arrow").addEventListener("click", () => {
     });
 });
 
-
 async function getData(src, list) {
-    let a = await fetch(`http://127.0.0.1:5500/${src}/`);
+    let a = await fetch(`${window.location.origin}/${src}/`);
     let response = await a.text();
-
     let div = document.createElement("div");
     div.innerHTML = response;
     Array.from(div.getElementsByTagName("a")).forEach(e => {
@@ -46,36 +44,27 @@ async function getData(src, list) {
             list.push(e.getAttribute("href"));
         }
     });
-
     return list;
 }
 
 async function displayPosters() {
     let f = await getData("Posters", files)
-
     for (const file of f) {
-        let d = await fetch(`http://127.0.0.1:5500/${file}`);
+        let d = await fetch(`${window.location.origin}/${file}`);
         let resp = await d.json();
-
         names.push(resp.name);
         years.push(resp.year);
         types.push(resp.type);
         times.push(resp.time);
         urls.push(resp.url);
-
     }
-
     let index = 0;
-
     setInterval(() => {
         index = (index + 1) % names.length;
         let figure = document.querySelector("figure")
-
         let slide = `<figure>
         <img src=${urls[index]} alt="Poster images">
-
         <div class="poster-info flexbox">
-
             <div class="flexbox">
                 <img width="23" src="img/television.svg" alt="Image of a television">
                 <div>${types[index]}</div>
@@ -88,53 +77,40 @@ async function displayPosters() {
                 <img width="23" src="img/clock.svg" alt="Image of a clock">
                 <div>${times[index]}</div>
             </div>
-
             <div class="liked-rate">
                 4K
             </div>
-
         </div>
-
         <div class="poster-name">
             <h1>${names[index]}</h1>
         </div>
     </figure>`
-
         figure.innerHTML = slide;
-
-
     }, 3000)
-
 }
 
 displayPosters()
 
 document.querySelector(".right-bar").addEventListener("click", (e) => {
     if (!e.target.closest(".right-bar > div")) return;
-
     if (!e.target.classList.contains("selected")) {
         let children = document.querySelector(".right-bar").children;
         for (let index = 0; index < children.length; index++) {
             const child = children[index];
-
             if (child.classList.contains("selected")) {
                 child.removeAttribute("class");
             };
-
         };
-
         e.target.setAttribute("class", "selected")
     }
 })
 
 async function displayMovies(src) {
     let movieList = await getData(src, movies);
-
     for (let index = 0; index < movieList.length; index++) {
         const movie = movieList[index];
-        let movieData = await fetch(`http://127.0.0.1:5500/${movie}`)
+        let movieData = await fetch(`${window.location.origin}/${movie}`)
         let jsonFormat = await movieData.json()
-
         document.querySelector(".movies").innerHTML = document.querySelector(".movies").innerHTML + `<div class="movie">
                 <img src="${jsonFormat.image_url}"
                     alt="Movie Image">
@@ -148,22 +124,18 @@ async function displayMovies(src) {
                 <div class="play-button">
                     <img src="img/play.svg" alt="Play Button">
                 </div>                
-
                 <h4>${jsonFormat.name}</h4>
-
                 <div class="movie-info">
                     <span class="genre">${jsonFormat.genres}</span>
                     <span class="year">${jsonFormat.year}</span>
                 </div>
             </div>`
     }
-
 }
 
 displayMovies("Movies/Preloaded Movies")
 
 document.addEventListener("click", (e) => {
-
     if (e.target.classList.contains("show-more")) {
         movies.length = 0;
         displayMovies("Movies/Postloaded Movies");
@@ -171,28 +143,22 @@ document.addEventListener("click", (e) => {
         document.querySelector(".show-more").removeAttribute("class");
         document.querySelector("button").setAttribute("class", "show-less");
     }
-
     else if (e.target.classList.contains("show-less")) {
         for (let index = 0; index < 12; index++) {
             document.querySelector(".movies").lastElementChild.remove();
         }
-
         document.querySelector(".show-less").innerHTML = "SHOW MORE";
         document.querySelector(".show-less").removeAttribute("class");
         document.querySelector("button").setAttribute("class", "show-more");
-
     }
-
 })
 
 async function displayCategories() {
     let genreList = await getData("Categories", genres);
-
     for (let index = 0; index < genreList.length; index++) {
         const genre = genreList[index];
-        let genreData = await fetch(`http://127.0.0.1:5500/${genre}`);
+        let genreData = await fetch(`${window.location.origin}/${genre}`);
         let jsonFormat = await genreData.json();
-
         document.querySelector(".categories").innerHTML = document.querySelector(".categories").innerHTML + `<div class="category">
                 <img src="${jsonFormat.url}" alt="Category Image">
                 <div class="category-text">
@@ -205,15 +171,12 @@ async function displayCategories() {
 
 displayCategories()
 
-
 async function displayShows() {
     let showList = await getData("Live Shows", shows);
-
     for (let index = 0; index < showList.length; index++) {
         const show = showList[index];
-        let showData = await fetch(`http://127.0.0.1:5500/${show}`);
+        let showData = await fetch(`${window.location.origin}/${show}`);
         let jsonFormat = await showData.json();
-
         document.querySelector(".live-shows").innerHTML = document.querySelector(".live-shows").innerHTML + `<div class="show">
                 <div class="live">LIVE</div>
                 <img src="${jsonFormat.src}" alt="Image of Live TV Shows">
@@ -230,6 +193,3 @@ async function displayShows() {
 }
 
 displayShows()
-
-
-
